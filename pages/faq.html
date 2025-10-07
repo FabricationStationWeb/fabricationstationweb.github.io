@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently Asked Questions about Fabrication Station - Workshop access, training requirements, safety protocols, and booking information.">
+    <meta name="keywords" content="fabrication station, FAQ, workshop questions, metalworking, training, safety">
+    <meta name="author" content="Fabrication Station">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fabrication Station - Frequently Asked Questions">
+    <meta property="og:description" content="Find answers to common questions about workshop access, training, safety requirements, and booking procedures.">
+    <meta property="og:type" content="website">
+    <title>FAQ - Fabrication Station</title>
+
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+
+        /* FAQ-specific styles */
+        .faq-section {
+            margin: 2rem 0;
+        }
+
+        .faq-category {
+            background: #f8f8f8;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .faq-category h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #333;
+        }
+
+        .faq-question:hover {
+            background: #f5f5f5;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1rem;
+            display: none;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        .faq-toggle {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-toggle.active {
+            transform: rotate(180deg);
+        }
+
+        .contact-highlight {
+            background: #e8f4fd;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+        }
+
+        .safety-warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+        }
+
+        .level-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+
+        .level-0 { background: #e3f2fd; color: #1565c0; }
+        .level-1 { background: var(--training-level-1); color: #1a5a2e; }
+        .level-2 { background: var(--training-level-2); color: #6b5b00; }
+        .level-3 { background: var(--training-level-3); color: #4a2c5a; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <span>Fabrication Station</span>
+            </div>
+            <nav class="nav">
+                <a href="../index.html" class="nav__link">Home</a>
+                <a href="training.html" class="nav__link">Training</a>
+                <a href="safety.html" class="nav__link">Safety</a>
+                <a href="booking.html" class="nav__link">Booking</a>
+                <a href="faq.html" class="nav__link nav__link--active">FAQ</a>
+                <a href="resources.html" class="nav__link">Resources</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Frequently Asked Questions</h1>
+                    <p class="hero-subtitle">Everything you need to know about the Fabrication Station</p>
+                    <p class="hero-description">
+                        Find quick answers to the most common questions about workshop access, training requirements, safety protocols, and booking procedures.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                
+                <!-- Workshop Access & Keys -->
+                <div class="faq-category">
+                    <h3>🔑 Workshop Access & Keys</h3>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How do I get access to the workshop?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You need to complete the appropriate training level first. Once trained, you can request keys from the workshop technicians. The workshop is also accessible during working hours (9:30-12:30, 1:30-4:30) via the casting or plaster room.</p>
+                            <div class="contact-highlight">
+                                <strong>Key holders:</strong> Workshop technicians
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What if the technicians aren't available when I need to return keys?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Lock the space, leave keys in the designated area, and email the technicians confirming safe closure of the workshop.</p>
+                            <div class="contact-highlight">
+                                <strong>Email:</strong> <a href="mailto:fabricationstation@tus.ie" style="color: #e74c3c; text-decoration: underline;">Contact Workshop Team</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How many people can use the workshop at once?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Maximum 10 people at a time due to space and safety considerations.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Do I need to book time in the workshop?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Currently, no booking is required - it operates on a first-come, first-served basis. However, a booking system will be implemented in the future as the space becomes busier.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training -->
+                <div class="faq-category">
+                    <h3>🎓 Training</h3>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What training do I need to use the workshop?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Training depends on what equipment you want to use:</p>
+                            <ul>
+                                <li><span class="level-badge level-1">Level 1 (Green)</span>Hand tools and basic workshop safety - 3-hour session including H&S intro</li>
+                                <li><span class="level-badge level-2">Level 2 (Yellow)</span>Pneumatic and battery power tools, chop saw, angle grinders</li>
+                                <li><span class="level-badge level-3">Level 3 (Purple)</span>MIG welding, pillar drill, and advanced equipment</li>
+                            </ul>
+                            <p>Students gain independent access to equipment progressively based on completed training levels.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Can I skip levels if I have previous experience?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>No, the training levels are progressive and build upon each other. All students must complete each level sequentially.</p>
+                            <p><strong>Important:</strong> These workshops function as both training sessions and competency assessments. Students must demonstrate their ability to safely operate tools and follow workshop protocols.</p>
+                            <p><strong>For students with hand tool experience:</strong> We offer a condensed 1-hour session focusing on health and safety and space usage (instead of the full 3-hour Level 1 session). However, you'll still need to attend to demonstrate competency and learn this workshop's specific safety procedures.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How do I book training sessions?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Training sessions are booked through the SISO system.</p>
+                            <div class="contact-highlight">
+                                <strong>SISO Booking:</strong> <a href="https://tuslsad.siso.co/" target="_blank">https://tuslsad.siso.co/</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What does Level 3 welding training involve?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Level 3 involves two supervised sessions with practice time between. The second session is a competency check to ensure safe operation. You're expected to practice between the two sessions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Safety & PPE -->
+                <div class="faq-category">
+                    <h3>🛡️ Safety & Personal Protective Equipment</h3>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What PPE do I need to bring?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>You must provide:</strong></p>
+                            <ul>
+                                <li>Steel-toed boots</li>
+                                <li>Overalls (boiler suits)</li>
+                                <li>Safety gloves (leather or cut-resistant)</li>
+                            </ul>
+                            <div class="safety-warning">
+                                <strong>⚠️ No entry without complete PPE (boots + overalls + safety gloves)</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What PPE does the workshop provide?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>The workshop provides:</strong></p>
+                            <ul>
+                                <li>Safety goggles/glasses/face shields</li>
+                                <li>Hearing protection (ear mufflers)</li>
+                                <li>Respiratory masks</li>
+                                <li>Welding masks/gloves</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            When should I wear or remove gloves?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>Wear gloves:</strong> For handling materials and sharp edges</p>
+                            <p><strong>Remove gloves:</strong> When operating machinery with rotating/moving parts (pillar drill, chop saw, angle grinder, pneumatic/electric tools)</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What about the buddy system?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>Buddy system required for:</strong> Power tools, angle grinders, welding equipment</p>
+                            <p><strong>Not required for:</strong> Hand tools and green tools</p>
+                            <p>Minimum two people must be in the space during high-risk activities for safety.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Can I use my phone or laptop in the workshop?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>Limited use only:</strong> Emergency calls, timers, or taking a single photo</p>
+                            <p><strong>Why restricted:</strong> Safety concerns (distraction) and equipment damage (metal dust/debris can enter devices)</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Should I buy my own PPE or can I borrow workshop equipment?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>For occasional use:</strong> You can borrow PPE for a couple of sessions to try out the space.</p>
+                            <p><strong>For regular use:</strong> We strongly recommend purchasing your own PPE for hygiene, fit, and availability reasons.</p>
+                            <div class="safety-warning">
+                                Personal PPE ensures proper fit and hygiene, which are crucial for your safety and comfort during extended workshop sessions.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" id="ppe-guide">
+                        <button class="faq-question">
+                            Where can I buy PPE in Limerick?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>🏪 Local Limerick Shops:</strong></p>
+                            <ul>
+                                <li><strong>Joe McKenna's</strong> - Parnell Street (near train station) - Hardware & Tools Specialist - <em>20% student discount available</em></li>
+                                <li><strong>Guineys</strong> - 1a William Court Mall, William Street, Limerick - <a href="https://guineys.ie/" target="_blank" style="color: #e74c3c;">guineys.ie</a> - Budget option</li>
+                                <li><strong>Screwfix</strong> - Ballysimon Road - Click & Collect Available</li>
+                                <li><strong>Chadwicks</strong> - Ballysimon Road - Builder's Merchant</li>
+                                <li><strong>TJ O'Mahony</strong> - Multiple Limerick Locations - Workwear Range</li>
+                                <li><strong>Tadhg O'Connor Ltd</strong> - Limerick - Budget Options</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Equipment & Tools -->
+                <div class="faq-category">
+                    <h3>🔧 Equipment & Tools</h3>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What equipment can I use with each training level?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>🟢 Green Tools (Low Risk) - Level 1 Training Required:</strong></p>
+                            <ul>
+                                <li>Hand tools</li>
+                                <li>3-in-1 machine (Bernardo)</li>
+                            </ul>
+                            <p><strong>🟡 Yellow Tools (Medium Risk) - Level 2 Training Required:</strong></p>
+                            <ul>
+                                <li>Pneumatic tools</li>
+                                <li>Battery-operated tools</li>
+                                <li>Hydraulic press</li>
+                                <li>Spot welder</li>
+                            </ul>
+                            <p><strong>🟣 Purple Tools (High Risk) - Level 3 Training Required:</strong></p>
+                            <ul>
+                                <li>Welding equipment (MIG, TIG)</li>
+                                <li>Chop saw</li>
+                                <li>Large roller</li>
+                                <li>Pillar drill</li>
+                                <li>Mains power tools (angle grinder)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What if equipment is broken or out of order?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Out-of-order equipment will be clearly labeled with warning labels. <strong>Never use equipment with warning labels.</strong></p>
+                            <p>Report any damage immediately to <a href="mailto:fabricationstation@tus.ie" style="color: #e74c3c; text-decoration: underline;">workshop team via email</a></p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Can I take tools home or to other workshops?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>Absolutely not.</strong> All tools must be returned to their designated places after use. Tools are not to be removed from the workshop under any circumstances.</p>
+                            <p><strong>Important:</strong> These tools are used to run workshop training sessions. Misplaced or missing tools can disrupt scheduled sessions and affect the smooth operation of the workshop for all users.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Materials & Projects -->
+                <div class="faq-category">
+                    <h3>📦 Materials & Projects</h3>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Do I need to bring my own materials and consumables?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>No, the workshop provides all necessary consumables and tools including cutting discs, welding rods, basic metal stock, etc. Students do not need to provide any equipment or consumables for workshop use. However if you need large amount of materials do get in touch with the thechnicians to stock materials accordingly</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What if I need special materials for my project?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>For specific project requirements beyond standard workshop stock, <a href="mailto:fabricationstation@tus.ie" style="color: #e74c3c; text-decoration: underline;">contact us via email</a></p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Can I store work-in-progress projects in the workshop?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Storage space must be approved by technicians beforehand due to limited space. Contact them before assuming you can leave projects in the workshop.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Housekeeping & Rules -->
+                <div class="faq-category">
+                    <h3>🧹 Housekeeping & Workshop Rules</h3>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What do I need to do after each workshop session?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>Every user must:</strong></p>
+                            <ul>
+                                <li>Dispose of all waste materials in designated bins (metal scraps and general waste are separate - fire hazard)</li>
+                                <li>Clean your work area thoroughly, including tables and floor</li>
+                                <li>Put all tools back in their designated places</li>
+                                <li>Report any damage to equipment immediately</li>
+                                <li>Report near-misses or safety concerns</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What items am I not allowed to bring into the workshop?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>Items/behaviors not permitted in the workshop:</strong></p>
+                            <ul>
+                                <li>Backpacks, jackets, loose clothing in work area (fire and tripping hazard)</li>
+                                <li>Food, drinks, alcohol, or medications causing drowsiness</li>
+                                <li>Short sleeves, jewelry, loose clothing, scarves</li>
+                                <li>Visitors (unless exceptional circumstances with technician approval)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact & Emergency -->
+                <div class="faq-category">
+                    <h3>📞 Contact & Emergency Information</h3>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Who do I contact for different situations?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="contact-highlight">
+                                <p><strong>General inquiries, damage reports, safety concerns:</strong><br>
+                                Use our contact form (monitored Monday and Tuesday)<br>
+                                For urgent matters, contact workshop technicians directly</p>
+
+                                <p><strong>Key access:</strong><br>
+                                Workshop technicians (in person at technicians' workshop)</p>
+                                
+                                <p><strong>Emergency services:</strong> 112 / 999</p>
+                                
+                                <p><strong>First aiders on site:</strong><br>
+                                Workshop staff (contact details provided during Level 0 training)<br>
+                                <em>For severe injury, call emergency services first (112 / 999)</em></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Should I report near-misses and minor incidents?
+                            <span class="faq-toggle">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>Yes, absolutely!</strong> Both accidents and near-misses should be reported to technicians immediately. This is about making the workshop safer for everyone.</p>
+                            <div class="contact-highlight">
+                                <strong>Report to:</strong> <a href="mailto:fabricationstation@tus.ie" style="color: #e74c3c; text-decoration: underline;">Workshop Team Email</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="faq-category">
+                    <h3>🚀 Quick Actions</h3>
+                    <div style="text-align: center; padding: 2rem;">
+                        <a href="https://tuslsad.siso.co/" class="btn btn-primary" target="_blank">Book Training on SISO</a>
+                        <a href="training.html" class="btn btn-secondary">View Training Levels</a>
+                        <a href="safety.html" class="btn btn-secondary">Safety Guidelines</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3>Fabrication Station</h3>
+                    <p>Located at the back of the Church, next to the main technician workshop.<br>
+                    Meeting point: Maker Station</p>
+                </div>
+                <div class="footer__section">
+                    <h3>Quick Links</h3>
+                    <a href="training.html">Training</a>
+                    <a href="safety.html">Safety Guidelines</a>
+                    <a href="booking.html">Book Now</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="#ppe-guide">PPE Purchasing</a>
+                    <a href="https://tuslsad.siso.co/" target="_blank">SISO Booking</a>
+                </div>
+                <div class="footer__section">
+                    <h3>Contact</h3>
+                    <p><strong>Email:</strong> <a href="mailto:fabricationstation@tus.ie" style="color: #e74c3c; text-decoration: underline;">Contact Workshop</a><br>
+                    <strong>Emergency:</strong> 112 / 999<br>
+                    <strong>Keys:</strong> Workshop Technicians</p>
+                </div>
+                <div class="footer__section">
+                    <h3>Workshop Levels</h3>
+                    <a href="training.html#level1">Level 1: Hand Tools</a>
+                    <a href="training.html#level2">Level 2: Power Tools</a>
+                    <a href="training.html#level3">Level 3: MIG Welding</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const toggle = this.querySelector('.faq-toggle');
+                    
+                    // Toggle the answer visibility
+                    answer.classList.toggle('active');
+                    toggle.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

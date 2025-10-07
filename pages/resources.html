@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fabrication Station resources - Tool guides, tutorials, and step-by-step instructions for workshop equipment.">
+    <meta name="keywords" content="fabrication resources, tool guides, welding tutorials, workshop instructions">
+    <meta name="author" content="Fabrication Station">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fabrication Station - Resources & Tool Guides">
+    <meta property="og:description" content="Comprehensive guides and tutorials for workshop tools and equipment.">
+    <meta property="og:type" content="website">
+
+    <title>Resources - Fabrication Station</title>
+
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .resource-section {
+            margin: 2rem 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .resource-header {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .resource-header:hover {
+            background: #e9ecef;
+        }
+
+        .resource-header h3 {
+            margin: 0;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .resource-toggle {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .resource-toggle.active {
+            transform: rotate(180deg);
+        }
+
+        .resource-content {
+            display: none;
+            padding: 2rem;
+            background: white;
+        }
+
+        .resource-content.active {
+            display: block;
+        }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .tool-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .tool-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #999;
+        }
+
+        .tool-info {
+            padding: 1.5rem;
+        }
+
+        .tool-info h4 {
+            margin: 0 0 1rem 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .tool-info p {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+
+        .step-list {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .step-list h4 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .step-list ol {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+
+        .step-list li {
+            margin: 0.8rem 0;
+            line-height: 1.5;
+        }
+
+        .video-embed {
+            margin: 1.5rem 0;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .playlist-link {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 1rem 0;
+            transition: background 0.3s ease;
+        }
+
+        .playlist-link:hover {
+            background: #c0392b;
+            color: white;
+        }
+
+        .safety-warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .safety-warning h4 {
+            color: #856404;
+            margin-top: 0;
+        }
+
+        .disc-matrix {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .disc-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .disc-image {
+            width: 100%;
+            height: 180px;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #999;
+            overflow: hidden;
+        }
+
+        .disc-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .disc-info {
+            padding: 1rem;
+        }
+
+        .disc-info h4 {
+            margin: 0 0 0.8rem 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .disc-matrix {
+                grid-template-columns: 1fr;
+            }
+
+            .tool-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <span>Fabrication Station</span>
+            </div>
+            <nav class="nav">
+                <a href="../index.html" class="nav__link">Home</a>
+                <a href="training.html" class="nav__link">Training</a>
+                <a href="safety.html" class="nav__link">Safety</a>
+                <a href="booking.html" class="nav__link">Booking</a>
+                <a href="faq.html" class="nav__link">FAQ</a>
+                <a href="resources.html" class="nav__link nav__link--active">Resources</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Resources & Tool Guides</h1>
+                <p>Comprehensive guides, tutorials, and step-by-step instructions for workshop equipment</p>
+            </div>
+        </section>
+
+        <section class="resources">
+            <div class="container">
+
+                <!-- Bending Machine Section -->
+                <div class="resource-section">
+                    <div class="resource-header" onclick="toggleResource(this)">
+                        <h3>🔧 Bending Machine</h3>
+                        <span class="resource-toggle">▼</span>
+                    </div>
+                    <div class="resource-content">
+                        <div class="tool-grid">
+                            <div class="tool-card">
+                                <div class="tool-image">
+                                    <img src="../assets/images/equipment/bending-machine.jpg" alt="Sheet metal bending machine for precise metalwork">
+                                </div>
+                                <div class="tool-info">
+                                    <h4>Sheet Metal Brake</h4>
+                                    <p><strong>Type:</strong> Manual bending machine</p>
+                                    <p><strong>Applications:</strong> Precise bends, flanges, box forming</p>
+                                    <p><strong>Materials:</strong> Sheet metal up to specified thickness</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>Learn proper bending techniques and safety procedures for metalworking projects.</p>
+
+                        <a href="https://www.youtube.com/playlist?list=PLgmJ3z22qUynYGFLtvozTQ5CA2bMQjqAx" class="playlist-link" target="_blank">
+                            📺 Complete Bending Machine Playlist
+                        </a>
+
+                        <h4>Featured Tutorial: Advanced Bending Techniques</h4>
+                        <div class="video-embed">
+                            <iframe src="https://www.youtube.com/embed/xPIuxWbpGUg?start=1096" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="step-list">
+                            <h4>Basic Bending Steps</h4>
+                            <ol>
+                                <li>Inspect the material for any defects or cracks</li>
+                                <li>Measure and mark the bend line accurately</li>
+                                <li>Set up the bending machine with appropriate dies</li>
+                                <li>Position the material securely in the machine</li>
+                                <li>Apply gradual pressure to create the bend</li>
+                                <li>Check the angle with a protractor or gauge</li>
+                                <li>Make adjustments if necessary</li>
+                            </ol>
+                        </div>
+
+                        <div class="safety-warning">
+                            <h4>⚠️ Safety Requirements</h4>
+                            <ul>
+                                <li>Green Level training minimum required</li>
+                                <li>Always wear safety glasses</li>
+                                <li>Keep hands clear of moving parts</li>
+                                <li>Never exceed the machine's capacity limits</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Angle Grinder Section -->
+                <div class="resource-section">
+                    <div class="resource-header" onclick="toggleResource(this)">
+                        <h3>⚡ Angle Grinder & Discs</h3>
+                        <span class="resource-toggle">▼</span>
+                    </div>
+                    <div class="resource-content">
+                        <p>Understanding different disc types and their applications for various metalworking tasks.</p>
+
+                        <h4>Angle Grinder Disc Types</h4>
+                        <div class="disc-matrix">
+                            <div class="disc-card">
+                                <div class="disc-info">
+                                    <h4>Grinding Wheel (Coarse Abrasive)</h4>
+                                    <p><em>Solid grinding wheel disc with bonded abrasive material and ribbed edge for heavy material removal and aggressive cutting</em></p>
+                                    <p><strong>What is a grinding wheel?</strong></p>
+                                    <p><strong>SOLID DISC</strong> with bonded abrasive material and ribbed edge. Aggressive cutting action for <strong>heavy material removal</strong> and rough shaping. Creates sparks and removes metal quickly.</p>
+                                    <p><strong>Use:</strong> Heavy grinding, weld removal, aggressive material removal, rough shaping thick metal.</p>
+                                    <p><strong>Result:</strong> Rough finish, requires follow-up with finer abrasives.</p>
+                                </div>
+                            </div>
+
+                            <div class="disc-card">
+                                <div class="disc-info">
+                                    <h4>Cut-off Wheel</h4>
+                                    <p><em>Thin profile cut-off wheel with tapered edge for slicing through metal, plate, rebar, and bolts</em></p>
+                                    <p><strong>What is a cut-off wheel?</strong></p>
+                                    <p>Thin profile with tapered edge suitable for slicing into metal (plate metal, rebar, bolts). Thicker cut-off wheels should be used for stronger metals.</p>
+                                    <p><strong>Use:</strong> Cutting metal stock, trimming, precision cuts.</p>
+                                </div>
+                            </div>
+
+                            <div class="disc-card">
+                                <div class="disc-info">
+                                    <h4>Flap Disc (Fine Finishing)</h4>
+                                    <p><em>Flap disc with overlapping sandpaper flaps for fine finishing, deburring, and smooth metal polishing</em></p>
+                                    <p><strong>What is a flap disc?</strong></p>
+                                    <p><strong>OVERLAPPING SANDPAPER FLAPS</strong> arranged around the disc. Much gentler than grinding wheels - like fine sandpaper for metal. <strong>Self-refreshing</strong> as outer layers wear away.</p>
+                                    <p><strong>Use:</strong> Fine finishing, deburring, blending welds, scratch removal, polishing.</p>
+                                    <p><strong>Result:</strong> Smooth, finished surface ready for painting or final use.</p>
+                                </div>
+                            </div>
+
+                            <div class="disc-card">
+                                <div class="disc-info">
+                                    <h4>Wire Wheel</h4>
+                                    <p><em>Wire wheel with metal wire fibres for removing rust, paint, and adhesives from metal surfaces</em></p>
+                                    <p><strong>What is a wire wheel?</strong></p>
+                                    <p>Metal wire fibres (straight or intertwined) for removing rust, paint, and adhesives from metal surfaces. Quality varies significantly.</p>
+                                    <p><strong>Use:</strong> Rust removal, paint stripping, surface cleaning, preparation.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step-list">
+                            <h4>📋 Typical Workflow: Grinding Wheel → Flap Disc</h4>
+                            <ol>
+                                <li><strong>Start with Grinding Wheel:</strong> Remove heavy material, rough shaping, weld removal</li>
+                                <li><strong>Switch to Flap Disc:</strong> Smooth the rough surface, blend marks, final finishing</li>
+                                <li><strong>Result:</strong> Professional finish ready for painting or use</li>
+                            </ol>
+                            <p><strong>Key Difference:</strong> Grinding wheels are for <em>heavy removal</em>, flap discs are for <em>fine finishing</em>.</p>
+                        </div>
+
+                        <div class="safety-warning">
+                            <h4>⚠️ Critical Safety</h4>
+                            <ul>
+                                <li>Yellow Level training required</li>
+                                <li>Always wear face protection and safety glasses</li>
+                                <li>Never touch discs after use (they generate extreme heat)</li>
+                                <li>Avoid cheap wire wheels that degrade quickly</li>
+                                <li>Use buddy system - never operate alone</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MIG Welder Section -->
+                <div class="resource-section">
+                    <div class="resource-header" onclick="toggleResource(this)">
+                        <h3>🔥 MIG Welder</h3>
+                        <span class="resource-toggle">▼</span>
+                    </div>
+                    <div class="resource-content">
+                        <div class="tool-grid">
+                            <div class="tool-card">
+                                <div class="tool-image">
+                                    <img src="../assets/images/equipment/mig-welder.jpg" alt="MIG welding in action showing proper technique and safety equipment">
+                                </div>
+                                <div class="tool-info">
+                                    <h4>MIG Welding Station</h4>
+                                    <p><strong>Process:</strong> Metal Inert Gas (GMAW)</p>
+                                    <p><strong>Applications:</strong> Steel fabrication, repairs, joints</p>
+                                    <p><strong>Level Required:</strong> Purple Level certification</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>Metal Inert Gas welding techniques and best practices for quality joints.</p>
+
+                        <h4>Good Welding Sound Example</h4>
+                        <div class="video-embed">
+                            <iframe src="https://www.youtube.com/embed/a6sxlOdgtDo?start=109" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="step-list">
+                            <h4>Basic MIG Welding Steps</h4>
+                            <ol>
+                                <li>Set up proper ventilation and fume extraction</li>
+                                <li>Select appropriate wire and gas for material</li>
+                                <li>Clean the base metal thoroughly</li>
+                                <li>Set correct voltage and wire feed speed</li>
+                                <li>Position work piece for comfortable welding</li>
+                                <li>Maintain consistent travel speed and angle</li>
+                                <li>Listen for the characteristic "bacon frying" sound</li>
+                                <li>Allow proper cooling time between passes</li>
+                            </ol>
+                        </div>
+
+                        <div class="safety-warning">
+                            <h4>⚠️ Purple Level Required</h4>
+                            <ul>
+                                <li>Mandatory Purple Level training completion</li>
+                                <li>Auto-darkening welding helmet required</li>
+                                <li>Fire-resistant clothing and gloves</li>
+                                <li>Proper ventilation and fume extraction</li>
+                                <li>Buddy system mandatory</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FastSpotter Resistance Welder Section -->
+                <div class="resource-section">
+                    <div class="resource-header" onclick="toggleResource(this)">
+                        <h3>⚡ FastSpotter Single-Sided Resistance Welder</h3>
+                        <span class="resource-toggle">▼</span>
+                    </div>
+                    <div class="resource-content">
+                        <div class="tool-grid">
+                            <div class="tool-card">
+                                <div class="tool-image">
+                                    <img src="../assets/images/equipment/resistance-welder.jpg" alt="FastSpotter resistance spot welder in operation">
+                                </div>
+                                <div class="tool-info">
+                                    <h4>FastSpotter PX1700ECO</h4>
+                                    <p><strong>Type:</strong> Single-sided resistance spot/seam welder</p>
+                                    <p><strong>Power:</strong> 3.5 kVA or 5.0 kVA transformer</p>
+                                    <p><strong>Controller:</strong> Digital PX1700ECO with 9 timing parameters</p>
+                                    <p><strong>Applications:</strong> Heat-shield panels, wire mesh, insulation, exhaust systems</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Overview</h4>
+                        <p>The FastSpotter is a single-sided resistance spot/seam welder with digital PX1700ECO controls, designed for welding thin sheets. It works by clamping the sheets and passing high current through them (the Joule effect), so <strong>no filler material is needed</strong>. The unit includes a pistol-grip studder gun (electrode) and a workpiece earth clamp.</p>
+
+                        <div class="step-list">
+                            <h4>🛠️ Setup and Installation</h4>
+                            <ol>
+                                <li><strong>Power Connection:</strong> Have qualified electrician connect to correct mains voltage (220-240V single-phase)</li>
+                                <li><strong>Grounding:</strong> Attach earth clamp firmly to workpiece or welding table</li>
+                                <li><strong>Positioning:</strong> Place on level, horizontal surface (tilting >15° may cause tipping)</li>
+                                <li><strong>Clearances:</strong> Maintain 1m clearance around machine for safe operation</li>
+                                <li><strong>Environment:</strong> Operate in clean, dry, well-lit area with ventilation</li>
+                                <li><strong>Air Supply:</strong> Connect clean, dry compressed air for pneumatic gun if equipped</li>
+                            </ol>
+                        </div>
+
+                        <div class="step-list">
+                            <h4>⚙️ Operating Procedure</h4>
+                            <ol>
+                                <li><strong>Pre-Operation Inspection:</strong> Check cables, studder gun, and clamp for damage</li>
+                                <li><strong>Power On:</strong> Switch main isolation switch, then machine power</li>
+                                <li><strong>Parameter Setup:</strong> Configure PX1700ECO timing parameters:
+                                    <ul>
+                                        <li>Squeeze (clamp) time</li>
+                                        <li>Weld time and pulses</li>
+                                        <li>Hold (post-weld) time</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Current Adjustment:</strong> Start with low current, test on scrap metal, gradually increase</li>
+                                <li><strong>Test Squeeze:</strong> Use black "squeeze" button to test pneumatic clamp without welding</li>
+                                <li><strong>Make Weld:</strong> Position electrode on top sheet, ensure earth clamp contact, press green trigger</li>
+                                <li><strong>Post-Weld:</strong> Release trigger after cycle ends, allow cooling, inspect weld</li>
+                                <li><strong>Clean Electrode:</strong> Remove spatter with fine file between welds</li>
+                            </ol>
+                        </div>
+
+                        <div class="step-list">
+                            <h4>📐 Material Specifications</h4>
+                            <ul>
+                                <li><strong>Top Sheet Thickness:</strong> Typically limited to ~1.0mm</li>
+                                <li><strong>Bottom Sheet Thickness:</strong> ~0.75mm maximum</li>
+                                <li><strong>Materials:</strong> Thin steel sheets, heat-shield panels, wire mesh</li>
+                                <li><strong>Industries:</strong> Aerospace, automotive, motorsport applications</li>
+                            </ul>
+                        </div>
+
+                        <div class="step-list">
+                            <h4>🎛️ PX1700ECO Digital Controller</h4>
+                            <p>Advanced digital control system with three numeric displays controlling nine welding timing parameters:</p>
+                            <ul>
+                                <li>Squeeze, pre-weld, weld, impulses</li>
+                                <li>Down-slope, post-weld, hold, pause</li>
+                                <li>Up to 10 programmable weld programs</li>
+                                <li>Values displayed in mains half-periods (50/60 Hz)</li>
+                                <li>Seam-weld mode available via circuit board jumpers</li>
+                            </ul>
+                        </div>
+
+                        <div class="safety-warning">
+                            <h4>⚠️ Critical Safety Requirements</h4>
+                            <ul>
+                                <li><strong>Training:</strong> Yellow Level minimum - only trained, competent operators (OSHA 1910.255)</li>
+                                <li><strong>PPE:</strong> Welding safety glasses/helmet, insulated gloves, flame-resistant clothing</li>
+                                <li><strong>Electrical Safety:</strong> High current output - never touch live terminals or wrap cables around body</li>
+                                <li><strong>Hot Metal Warning:</strong> Electrodes become extremely hot - never touch with bare hands after welding</li>
+                                <li><strong>Hand Safety:</strong> Keep hands, fingers clear of electrodes and clamp during operation</li>
+                                <li><strong>Level Operation:</strong> Never use on inclined surface (>15° tilt risk)</li>
+                                <li><strong>Magnetic Fields:</strong> Strong fields can affect pacemakers and damage electronics</li>
+                                <li><strong>Workspace:</strong> Keep floor dry, oil-free; ensure good ventilation for fumes</li>
+                                <li><strong>Emergency Access:</strong> Maintain accessible emergency stop/power switch</li>
+                                <li><strong>Buddy System:</strong> Never operate alone - pair work required</li>
+                            </ul>
+                        </div>
+
+                        <div class="step-list">
+                            <h4>🔧 Maintenance & Troubleshooting</h4>
+                            <ul>
+                                <li><strong>Regular Cleaning:</strong> File electrode tips to remove spatter buildup</li>
+                                <li><strong>Air System:</strong> Check compressed air supply is clean and dry</li>
+                                <li><strong>Electrical:</strong> Only qualified personnel for electrical maintenance</li>
+                                <li><strong>Lockout:</strong> Always shut off and lock out power before any maintenance</li>
+                                <li><strong>Weak Welds:</strong> Increase current gradually</li>
+                                <li><strong>Burn Through:</strong> Decrease current or reduce weld time</li>
+                            </ul>
+                        </div>
+
+                        <div class="step-list">
+                            <h4>📚 Technical Resources & Manuals</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin: 1rem 0;">
+                                <div style="background: white; padding: 1rem; border-radius: 6px; border: 1px solid #ddd;">
+                                    <h5>📖 FastSpotter Operating Manual</h5>
+                                    <p>Complete installation, operating and maintenance manual for FastSpotter 3.5 & 5.0 models</p>
+                                    <a href="https://www.westermans.com/assets/products/17337/files/2926/pmanual%20fast%20spotter%2035%20and%205.0%20s1%20and%20px1600.pdf"
+                                       target="_blank" class="btn btn-secondary" style="margin: 0.5rem 0;">
+                                        Download PDF Manual
+                                    </a>
+                                </div>
+
+                                <div style="background: white; padding: 1rem; border-radius: 6px; border: 1px solid #ddd;">
+                                    <h5>🎛️ PX1700ECO Controller Manual</h5>
+                                    <p>Technical documentation for PX1700ECO digital control system</p>
+                                    <a href="https://www.westermans.com/assets/products/18785/files/8477/px1700%2001.2022.pdf"
+                                       target="_blank" class="btn btn-secondary" style="margin: 0.5rem 0;">
+                                        Download Controller Manual
+                                    </a>
+                                </div>
+
+                                <div style="background: white; padding: 1rem; border-radius: 6px; border: 1px solid #ddd;">
+                                    <h5>📋 ManualsLib Reference</h5>
+                                    <p>Online manual with searchable content and user guides</p>
+                                    <a href="https://www.manualslib.com/manual/2820919/Westermans-International-Fast-Spotter-3-5.html"
+                                       target="_blank" class="btn btn-secondary" style="margin: 0.5rem 0;">
+                                        View Online Manual
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h5>Additional Resources</h5>
+                            <ul>
+                                <li><strong>Safety Standards:</strong> <a href="http://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.255" target="_blank">OSHA 1910.255 "Resistance Welding"</a></li>
+                                <li><strong>Equipment Supplier:</strong> <a href="https://www.weldingandwelder.com/product/fastspotter-single-sided-resistance-seam-c-w-px1700eco-controls-studder-gun-earth-clamp/" target="_blank">FastSpotter Product Page</a></li>
+                                <li><strong>Industry Guides:</strong> AWS safety bulletins, Miller Electric resistance welding guides</li>
+                                <li><strong>Workshop Support:</strong> Contact fabricationstation@tus.ie for training or technical issues</li>
+                            </ul>
+                        </div>
+
+                        <div class="safety-warning" style="background: #e8f4fd; border-color: #b8daff;">
+                            <h4>🎯 Key Success Factors</h4>
+                            <ul>
+                                <li><strong>Current is Critical:</strong> Weld quality depends much more on current than time</li>
+                                <li><strong>Clean Contact:</strong> Ensure electrode tip and earth clamp have excellent contact</li>
+                                <li><strong>Test First:</strong> Always test on scrap material before final welds</li>
+                                <li><strong>Progressive Settings:</strong> Start low current, increase gradually until satisfactory nugget forms</li>
+                                <li><strong>Proper Sequence:</strong> Follow squeeze → weld → hold cycle completely</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plasma Cutter Section -->
+                <div class="resource-section">
+                    <div class="resource-header" onclick="toggleResource(this)">
+                        <h3>🌟 Plasma Cutter</h3>
+                        <span class="resource-toggle">▼</span>
+                    </div>
+                    <div class="resource-content">
+                        <div class="tool-grid">
+                            <div class="tool-card">
+                                <div class="tool-image">
+                                    <img src="../assets/images/equipment/plasma-cutter.jpg" alt="Plasma cutting operation showing bright arc and metal cutting">
+                                </div>
+                                <div class="tool-info">
+                                    <h4>Plasma Cutting System</h4>
+                                    <p><strong>Process:</strong> High-temperature plasma arc</p>
+                                    <p><strong>Applications:</strong> Thick metal cutting, precise shapes</p>
+                                    <p><strong>Level Required:</strong> Purple Level certification</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>High-precision cutting for thick metals using plasma arc technology.</p>
+
+                        <div class="step-list">
+                            <h4>Basic Plasma Cutting Steps</h4>
+                            <ol>
+                                <li>Ensure adequate air supply and pressure</li>
+                                <li>Select appropriate cutting tip for material thickness</li>
+                                <li>Set correct amperage for material type</li>
+                                <li>Position work piece on cutting table</li>
+                                <li>Start arc away from cut line</li>
+                                <li>Maintain consistent travel speed</li>
+                                <li>Keep torch perpendicular to work surface</li>
+                                <li>Complete cut in single pass when possible</li>
+                            </ol>
+                        </div>
+
+                        <div class="safety-warning">
+                            <h4>⚠️ Purple Level Required</h4>
+                            <ul>
+                                <li>Purple Level training mandatory</li>
+                                <li>Welding helmet with proper shade rating</li>
+                                <li>Fire-resistant clothing required</li>
+                                <li>Adequate ventilation critical</li>
+                                <li>Fire extinguisher within reach</li>
+                                <li>Buddy system required</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3>Fabrication Station</h3>
+                    <p>Located next to the main technician workshop.<br>
+                    Meeting point for workshops: Maker Station</p>
+                </div>
+                <div class="footer__section">
+                    <h3>Quick Links</h3>
+                    <a href="training.html">Training</a>
+                    <a href="safety.html">Safety Guidelines</a>
+                    <a href="booking.html">Book Now</a>
+                    <a href="https://tuslsad.siso.co/" target="_blank">SISO Booking</a>
+                </div>
+                <div class="footer__section">
+                    <h3>Workshop Levels</h3>
+                    <a href="training.html#level1">Level 1: Hand Tools</a>
+                    <a href="training.html#level2">Level 2: Power Tools</a>
+                    <a href="training.html#level3">Level 3: MIG Welding</a>
+                </div>
+                <div class="footer__section">
+                    <h3>Contact</h3>
+                    <p>For questions or assistance, please contact our workshop team through the booking system.<br>
+                    Use SISO Booking System for workshop registration.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleResource(header) {
+            const content = header.nextElementSibling;
+            const toggle = header.querySelector('.resource-toggle');
+
+            // Close all other sections
+            document.querySelectorAll('.resource-content').forEach(section => {
+                if (section !== content) {
+                    section.classList.remove('active');
+                    section.previousElementSibling.querySelector('.resource-toggle').classList.remove('active');
+                }
+            });
+
+            // Toggle current section
+            content.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+    </script>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
